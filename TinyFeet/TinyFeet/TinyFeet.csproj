@@ -2,6 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>0.0.1</Version>
+    <Authors>Andy Liu</Authors>
+    <Company>Self Employed</Company>
+    <Description>Commanding pattern samples</Description>
+    <RepositoryUrl>https://github.com/andyliu1210/TinyFeet.git</RepositoryUrl>
+    <Copyright>Copyright 2020</Copyright>
+    <PackageReleaseNotes>Commanding pattern samples</PackageReleaseNotes>
+    <Product />
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
