@@ -3,7 +3,6 @@
     using System;
     using System.Linq;
     using System.Threading.Tasks;
-    using Microsoft.Extensions.Logging;
     using Microsoft.Extensions.DependencyInjection;
 
     using TinyFeet.Interfaces.Query;
@@ -14,16 +13,14 @@
         #region Fields
 
         private readonly IServiceProvider serviceProvider;
-        private readonly ILogger logger;
 
         #endregion Fields
 
         #region Constructor
 
-        public Dispatcher(IServiceProvider serviceProvider, ILogger logger)
+        public Dispatcher(IServiceProvider serviceProvider)
         {
             this.serviceProvider = serviceProvider;
-            this.logger = logger;
         }
 
         #endregion Constructor
@@ -37,7 +34,6 @@
             {
                 throw new NullReferenceException(message: "No command handler found");
             }
-            this.logger.LogInformation(message: $"Found command handler: {commandHandler.GetType().Name}");
 
             return await commandHandler.HandleAsync(command: command);
         }
@@ -51,7 +47,6 @@
             {
                 throw new NullReferenceException(message: "No query handler found");
             }
-            this.logger.LogInformation(message: $"Found query handler: {queryHandler.GetType().Name}");
 
             return await queryHandler.HandleAsync(query: query);
         }
