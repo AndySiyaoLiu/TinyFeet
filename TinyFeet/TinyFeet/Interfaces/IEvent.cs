@@ -1,7 +1,6 @@
-﻿namespace TinyFeet.Interfaces
+﻿namespace TinyFeet.Interfaces;
+
+public interface IEvent
 {
-    public interface IEvent
-    {
-        string FriendlyName { get; }
-    }
+    string FriendlyName { get; }
 }

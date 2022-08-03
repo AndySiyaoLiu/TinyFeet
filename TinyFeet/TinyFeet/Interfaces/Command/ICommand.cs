@@ -1,6 +1,5 @@
-﻿namespace TinyFeet.Interfaces.Command
+﻿namespace TinyFeet.Interfaces.Command;
+
+public interface ICommand : IEvent
 {
-    public interface ICommand : IEvent
-    {
-    }
 }

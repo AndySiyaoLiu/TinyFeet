@@ -1,6 +1,5 @@
-﻿namespace TinyFeet.Interfaces.Query
+﻿namespace TinyFeet.Interfaces.Query;
+
+public interface IQuery : IEvent
 {
-    public interface IQuery : IEvent
-    {
-    }
 }

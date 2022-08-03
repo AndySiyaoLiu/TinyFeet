@@ -1,22 +1,21 @@
-﻿namespace TinyFeet.Models
+﻿using TinyFeet.Interfaces.Query;
+
+namespace TinyFeet.Models;
+
+public class QueryResultList<T> : IQueryResult
 {
-    using TinyFeet.Interfaces.Query;
+    #region Constructor
 
-    public class QueryResultList<T> : IQueryResult
+    public QueryResultList(T[] items)
     {
-        #region Constructor
-
-        public QueryResultList(T[] items)
-        {
-            this.Items = items;
-        }
-
-        #endregion Constructor
-
-        #region Properties
-
-        public T[] Items { get; }
-
-        #endregion Properties
+        this.Items = items;
     }
+
+    #endregion Constructor
+
+    #region Properties
+
+    public T[] Items { get; }
+
+    #endregion Properties
 }

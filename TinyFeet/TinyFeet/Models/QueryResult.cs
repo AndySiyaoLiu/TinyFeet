@@ -1,8 +1,7 @@
-﻿namespace TinyFeet.Models
-{
-    using TinyFeet.Interfaces.Query;
+﻿using TinyFeet.Interfaces.Query;
 
-    public class QueryResult : IQueryResult
-    {
-    }
+namespace TinyFeet.Models;
+
+public class QueryResult : IQueryResult
+{
 }

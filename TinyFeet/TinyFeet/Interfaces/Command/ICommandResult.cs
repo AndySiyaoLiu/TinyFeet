@@ -1,7 +1,6 @@
-﻿namespace TinyFeet.Interfaces.Command
+﻿namespace TinyFeet.Interfaces.Command;
+
+public interface ICommandResult
 {
-    public interface ICommandResult
-    {
-        bool Success { get; }
-    }
+    bool Success { get; }
 }
